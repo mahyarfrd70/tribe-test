@@ -8,6 +8,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
   reactStrictMode: true,
+  publicRuntimeConfig: {tribeGQLHost: 'https://app.tribe.so/graphql'},
 };
 
 module.exports = withPlugins([[withBundleAnalyzer]], nextConfig);

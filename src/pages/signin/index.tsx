@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Signin = () => {
-  return <div>Signin</div>;
+import Signin from '@/views/Signin';
+
+const SigninPage = () => {
+  return <Signin />;
 };
 
-export default Signin;
+export default SigninPage;

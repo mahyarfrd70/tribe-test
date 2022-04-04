@@ -2,15 +2,10 @@ import React from 'react';
 
 import type {NextPage} from 'next';
 
-import HTMLHeadWrapper from '@/components/HTMLHeadWrapper';
-import Header from '@/layout/Header';
+import Posts from '@/views/Posts';
 
-const Home: NextPage = () => {
-  return (
-    <HTMLHeadWrapper title="Tribe test | Posts" description="Posts' list of community">
-      <Header />
-    </HTMLHeadWrapper>
-  );
+const PostsPage: NextPage = () => {
+  return <Posts />;
 };
 
-export default Home;
+export default PostsPage;

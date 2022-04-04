@@ -6,7 +6,7 @@
   "jsxBracketSameLine": true,
   "printWidth": 120,
 
-  "importOrder": ["react", "next", "^@/(.*)$", "^[./]"],
+  "importOrder": ["react", "next", "@tribeplatform/(.*)$", "^@/(.*)$", "^[./]"],
   "importOrderSeparation": true,
 
   "twConfig": "tailwind.config.js",

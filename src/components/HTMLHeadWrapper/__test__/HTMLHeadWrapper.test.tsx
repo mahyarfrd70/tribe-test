@@ -12,7 +12,7 @@ jest.mock('next/head', () => {
   };
 });
 
-describe('HTMLHeadWrapper component', () => {
+describe('components > HTMLHeadWrapper', () => {
   it('check props', () => {
     const {getByText} = render(
       <HTMLHeadWrapper title="title" description="this is description">

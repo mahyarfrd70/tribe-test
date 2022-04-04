@@ -2,7 +2,7 @@ import React, {FC, PropsWithChildren} from 'react';
 
 import Head from 'next/head';
 
-import {HTMLHeadWrapperProps} from './HTMLHeadWrapper.types';
+import type {HTMLHeadWrapperProps} from './HTMLHeadWrapper.types';
 
 const HTMLHeadWrapper: FC<PropsWithChildren<HTMLHeadWrapperProps>> = ({title, description, children}) => {
   return (

@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Signup = () => {
-  return <div>Signup</div>;
+import Signup from '@/views/Signup';
+
+const SignupPage = () => {
+  return <Signup />;
 };
 
-export default Signup;
+export default SignupPage;
