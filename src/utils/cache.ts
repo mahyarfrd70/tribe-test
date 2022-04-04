@@ -15,7 +15,6 @@ export default function cache<T>(key: string, fn: () => Promise<T>) {
     try {
       const data = await fn();
       cache.set(key, data);
-      console.log(data);
       return data;
     } catch (err) {
       throw err;
