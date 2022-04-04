@@ -30,7 +30,8 @@
   },
   "rules": {
     "jest/prefer-expect-assertions": ["warn", {"onlyFunctionsWithAsyncKeyword": true}],
-    "jest/no-hooks": "off"
+    "jest/no-hooks": "off",
+    "jest/prefer-lowercase-title": "off"
   },
   "overrides": [
     {
