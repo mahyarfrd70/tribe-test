@@ -8,5 +8,6 @@ export default async function generateAccessTokenController(
   res: NextApiResponse<AccessTokenResponse>,
 ) {
   const data = await generateAccessTokenService();
+
   res.send({accessToken: data});
 }

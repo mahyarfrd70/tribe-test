@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className="flex justify-center shadow sticky">
+    <div className="flex justify-center shadow sticky" data-testid="header">
       <div className="navbar  max-w-4xl">
         <div className="flex-1">
           <Link href="/">
