@@ -1,10 +1,11 @@
 import {Provider as TribeProvider} from '@tribeplatform/react-sdk';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import type {AppProps} from 'next/app';
 import getConfig from 'next/config';
 
 import Spinner from '@/components/Spinner';
+import Layout from '@/layout';
 
 import '../assets/styles/globals.css';
 
@@ -13,16 +14,21 @@ const {publicRuntimeConfig} = getConfig();
 function MyApp({Component, pageProps}: AppProps) {
   const [accessToken, setAccessToken] = useState('');
 
+  const generateToken = useCallback(async () => {
+    const res = await fetch('/api/generate-token');
+    const {accessToken} = await res.json();
+    localStorage.setItem(publicRuntimeConfig.tribeAccessTokenKey, accessToken);
+    setAccessToken(accessToken);
+  }, []);
+
   useEffect(() => {
-    async function generateToken() {
-      const res = await fetch('/api/generate-token');
-      const {accessToken} = await res.json();
-      setAccessToken(accessToken);
-    }
-    if (!accessToken) {
+    const savedAccessToken = localStorage.getItem(publicRuntimeConfig.tribeAccessTokenKey);
+    if (savedAccessToken) {
+      setAccessToken(savedAccessToken);
+    } else {
       generateToken();
     }
-  }, [accessToken]);
+  }, []);
 
   if (!accessToken) {
     return (
@@ -31,14 +37,17 @@ function MyApp({Component, pageProps}: AppProps) {
       </div>
     );
   }
+
   return (
     <TribeProvider
       config={{
         accessToken,
         baseUrl: publicRuntimeConfig.tribeGQLHost,
-      }}
-    >
-      <Component {...pageProps} />
+        networkDomain: process.env.NETWORK_DOMAIN,
+      }}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </TribeProvider>
   );
 }

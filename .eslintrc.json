@@ -40,13 +40,6 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-var-requires": "off"
       }
-    },
-    {
-      "files": ["cypress/**/*.ts"],
-      "rules": {
-        "jest/prefer-expect-assertions": "off",
-        "jest/expect-expect": "off"
-      }
     }
   ]
 }
