@@ -21,3 +21,5 @@ export function TribeClient({clientId, clientSecret, graphqlUrl}: TribeClientIns
     }),
   };
 }
+
+export const hasScopesPermission = jest.fn().mockImplementation((_post, permissions) => permissions.map(() => true));

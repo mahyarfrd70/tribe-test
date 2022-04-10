@@ -6,11 +6,16 @@ const {
   publicRuntimeConfig: {tribeAccessTokenKey},
 } = getConfig();
 
-const useLogout = () => {
+interface UseLogout {
+  logout: () => void;
+}
+
+const useLogout = (): UseLogout => {
   const logout = useCallback(() => {
     localStorage.removeItem(tribeAccessTokenKey);
     window.location.href = '/';
   }, []);
-  return logout;
+
+  return {logout};
 };
 export default useLogout;

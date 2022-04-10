@@ -33,6 +33,7 @@ const useGetPosts = () => {
   });
 
   const posts = useMemo(() => simplifyPaginatedResult<Post>(data).nodes, [data]);
+
   return {posts, isFetching, isError, isSuccess};
 };
 

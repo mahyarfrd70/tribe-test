@@ -3,6 +3,8 @@ import {useCallback, useEffect, useState} from 'react';
 
 import {useRouter} from 'next/router';
 
+import {JoinNetworkInput} from '@tribeplatform/gql-client/types';
+
 import errorMessages from '@/constants/errorMessages';
 
 const useSignUp = () => {
@@ -18,7 +20,7 @@ const useSignUp = () => {
   }, [error, isError]);
 
   const signup = useCallback(
-    async (input) => {
+    async (input: JoinNetworkInput) => {
       try {
         await mutateAsync({
           input,

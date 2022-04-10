@@ -10,7 +10,7 @@ import useAuth from '@/hooks/useAuth';
 import useLogout from '@/hooks/useLogout';
 
 const Header = () => {
-  const logout = useLogout();
+  const {logout} = useLogout();
   const {isLoggedIn, user} = useAuth();
 
   return (

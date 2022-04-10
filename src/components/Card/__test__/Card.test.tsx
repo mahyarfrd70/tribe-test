@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import {formatISO, subDays} from 'date-fns';
 
 import {render} from '@testing-library/react';
 
@@ -9,12 +10,13 @@ describe('components > Card', () => {
     expect.assertions(15);
     const mockDelete = jest.fn();
     const mockReact = jest.fn();
+    const date = formatISO(subDays(new Date(), 5));
     const {getByTestId} = render(
       <Card
         title="title"
         body="<p>body</p>"
         commentsCount={10}
-        createdAt="2022-04-04T10:14:46.878Z"
+        createdAt={date}
         likesCount={40}
         name="mahyar fard"
         reacted={false}

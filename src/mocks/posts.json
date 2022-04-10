@@ -1,0 +1,410 @@
+[
+  {
+    "id": "6KtHBDqsUS8fqMf",
+    "slug": "hello-word",
+    "mappingFields": [
+      {
+        "key": "title",
+        "type": "text",
+        "value": "\"Hello word\""
+      },
+      {
+        "key": "content",
+        "type": "html",
+        "value": "\"<p>This is the first tribe post </p><p></p>\""
+      },
+      {
+        "key": "previewImageId",
+        "type": "image",
+        "value": "null"
+      }
+    ],
+    "followersCount": 1,
+    "postTypeId": "0EWw9lrH66nWShy",
+    "reactionsCount": 2,
+    "hasMoreContent": false,
+    "isAnonymous": false,
+    "isHidden": false,
+    "shortContent": "<p>This is the first tribe post </p><p></p>",
+    "createdAt": "2022-04-08T08:33:13.091Z",
+    "ownerId": "0Y3FUtwBrU",
+    "createdById": "0Y3FUtwBrU",
+    "status": "PUBLISHED",
+    "spaceId": "z0FAbpZWMyuz",
+    "imageIds": [],
+    "pinnedInto": [],
+    "repliesCount": 0,
+    "totalRepliesCount": 0,
+    "repliedToIds": [],
+    "repliedToId": null,
+    "topicIds": [],
+    "title": "Hello word",
+    "embedIds": [],
+    "mentionedMembers": [],
+    "primaryReactionType": "EMOJI_BASE",
+    "customSeoDetail": {
+      "description": null,
+      "noIndex": null,
+      "thumbnail": null,
+      "thumbnailId": null,
+      "title": null
+    },
+    "relativeUrl": "/hello-world-3as27jw3/post/hello-word-6KtHBDqsUS8fqMf",
+    "url": "https://tribe-code-challange.tribeplatform.com/hello-world-3as27jw3/post/hello-word-6KtHBDqsUS8fqMf",
+    "authMemberProps": {
+      "context": "POST",
+      "scopes": [
+        "*",
+        "space:update",
+        "post:create",
+        "post:view:all",
+        "post:update:all",
+        "post:remove:all",
+        "post:reply:all",
+        "post:react:all",
+        "post:react:remove",
+        "post:pinToSpace",
+        "post:pinToPost:all",
+        "post:hide:all",
+        "post:unhide:all"
+      ],
+      "permissions": [
+        {
+          "name": "getPostReactionParticipants",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "postReactionParticipants",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "addReaction",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "removeReaction",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "addReply",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [
+            {
+              "path": "input.createdAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.updatedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.publishedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            }
+          ],
+          "outputPermissions": []
+        },
+        {
+          "name": "createReply",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [
+            {
+              "path": "input.createdAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.updatedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.publishedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            }
+          ],
+          "outputPermissions": []
+        },
+        {
+          "name": "updatePost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [
+            {
+              "path": "input.createdAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.updatedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            },
+            {
+              "path": "input.publishedAt",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            }
+          ],
+          "outputPermissions": [
+            {
+              "path": "isHidden",
+              "isAuthorized": {
+                "authorized": true,
+                "reason": null,
+                "requiredPlan": null
+              }
+            }
+          ]
+        },
+        {
+          "name": "removePost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "deletePost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "getPost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "post",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "pinReplyToPost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "unpinReplyFromPost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "hidePost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "unhidePost",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "getReplies",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        },
+        {
+          "name": "replies",
+          "isAuthorized": {
+            "authorized": true,
+            "reason": null,
+            "requiredPlan": null
+          },
+          "inputPermissions": [],
+          "outputPermissions": []
+        }
+      ],
+      "availableReplyTypes": [
+        {
+          "context": "reply",
+          "id": "R6MZ5h3BpcKmX0l",
+          "name": "Comment",
+          "pluralName": "Comments",
+          "slug": "tribe-comment",
+          "createdAt": "2022-04-04T10:14:44.866Z",
+          "primaryReactionType": "EMOJI_BASE",
+          "singleChoiceReactions": [],
+          "updatedAt": "2022-04-04T10:14:44.866Z",
+          "mappings": [
+            {
+              "key": "content",
+              "field": "html1",
+              "type": "html",
+              "title": "Content",
+              "description": "The Body of comment",
+              "required": true,
+              "isMainContent": true,
+              "isSearchable": true,
+              "default": null
+            },
+            {
+              "key": "previewImageId",
+              "field": "image1",
+              "type": "image",
+              "title": "Preview Image",
+              "description": "Preview image of comment",
+              "required": null,
+              "isMainContent": null,
+              "isSearchable": null,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "canReact": true,
+      "memberPostNotificationSettingsEnabled": true
+    },
+    "createdBy": {
+      "__typename": "SpaceMember",
+      "member": {
+        "displayName": null,
+        "name": "Mahyar Fard",
+        "id": "0Y3FUtwBrU",
+        "attributes": {
+          "locale": "en-US"
+        },
+        "profilePictureId": null,
+        "bannerId": null,
+        "status": "VERIFIED",
+        "username": "admin",
+        "email": "mahyarfrd@gmail.com",
+        "emailStatus": "verified",
+        "newEmail": null,
+        "tagline": "",
+        "lastSeenAt": "2022-04-09T18:40:55.108Z",
+        "createdAt": "2022-04-04T10:14:44.724Z",
+        "updatedAt": "2022-04-07T06:50:04.686Z",
+        "relativeUrl": "/member/0Y3FUtwBrU",
+        "url": "https://tribe-code-challange.tribeplatform.com/member/0Y3FUtwBrU"
+      }
+    },
+    "reactions": [
+      {
+        "count": 2,
+        "reacted": true,
+        "reaction": "+1"
+      }
+    ],
+    "attachmentIds": ["test"],
+    "negativeReactionsCount": 10,
+    "networkId": "netowork-id",
+    "positiveReactionsCount": 30,
+    "seoDetail": {
+      "description": "test",
+      "image": "image",
+      "title": "title"
+    },
+    "singleChoiceReactions": ["reaction"],
+    "topRepliers": [{"member": {}, "repliesCount": 0}]
+  }
+]

@@ -5,6 +5,7 @@ import Header from '..';
 jest.mock('@tribeplatform/react-sdk/hooks');
 
 describe('Header component', () => {
+  //these tests heas been written based on the useAuthMember mock and the order of test has not to be changed
   it('loggedin header', () => {
     const {queryByText, getByText, getByTestId} = render(<Header />);
 

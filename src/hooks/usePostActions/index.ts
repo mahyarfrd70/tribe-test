@@ -6,6 +6,8 @@ import {useRouter} from 'next/router';
 import {hasScopesPermission} from '@tribeplatform/gql-client';
 import type {Post} from '@tribeplatform/gql-client/types';
 
+import {PERMISSIONS} from '@/constants/permissions';
+
 import useAuth from '../useAuth';
 
 const usePostActions = (post: Post) => {
@@ -21,7 +23,7 @@ const usePostActions = (post: Post) => {
   );
 
   const getActionPermission = useCallback(
-    (permissions): boolean[] => {
+    (permissions: Array<PERMISSIONS>): boolean[] => {
       if (!isLoggedIn) return permissions.map(() => false);
       const permissionList = hasScopesPermission(post, permissions);
       return permissionList;
