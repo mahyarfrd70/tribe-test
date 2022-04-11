@@ -63,7 +63,6 @@ const useAddPost = () => {
 
   const addPost = useCallback(
     async ({title, body}: AddPostArgs) => {
-      debugger;
       if (generalSpaceId && !isSpacesFetching && !isPostTypesFetching && discussionPostTypeId) {
         await mutateAsync(getAddPostArg(title, body, generalSpaceId, discussionPostTypeId));
       }
