@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import React, {useMemo} from 'react';
+import React, {memo, useMemo} from 'react';
 
 import {AvatarProps} from '.';
 
@@ -16,11 +16,12 @@ const Avatar = ({name, className, dataTestId}: AvatarProps) => {
     <div className="avatar placeholder">
       <div
         data-testid={dataTestId}
-        className={clsx('bg-neutral-focus text-neutral-content rounded-full w-12', className)}>
+        className={clsx('bg-neutral-focus text-neutral-content rounded-full w-12', className)}
+      >
         <span>{avatarLabel}</span>
       </div>
     </div>
   );
 };
 
-export default Avatar;
+export default memo(Avatar);

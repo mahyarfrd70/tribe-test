@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import React from 'react';
+import React, {memo} from 'react';
 import type {PropsWithChildren} from 'react';
 
 import type {ButtonProps} from '.';
@@ -19,11 +19,12 @@ const Button = ({
       data-testid={dataTestId}
       disabled={isLoading}
       className={clsx('btn', buttonTypeClass, className)}
-      onClick={onClick}>
+      onClick={onClick}
+    >
       <If condition={!isLoading}>{children}</If>
       <If condition={isLoading}>Loading ...</If>
     </button>
   );
 };
 
-export default Button;
+export default memo(Button);

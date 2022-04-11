@@ -3,22 +3,24 @@ import * as Yup from 'yup';
 
 import {useEffect} from 'react';
 
+import dynamic from 'next/dynamic';
 import {useRouter} from 'next/router';
 
 import type {JoinNetworkInput} from '@tribeplatform/gql-client/types';
 
-import Alert from '@/components/Alert';
-import Button from '@/components/Button/Button';
 import Container from '@/components/Container';
 import HTMLHeadWrapper from '@/components/HTMLHeadWrapper';
 import If from '@/components/If';
-import InputWrapper from '@/components/InputWrapper';
 import Spinner from '@/components/Spinner';
-import TextInput from '@/components/TextInput';
 import {regexPatterns} from '@/constants/regex';
 import validationMessages from '@/constants/validationMessages';
 import useAuth from '@/hooks/useAuth';
 import useSignUp from '@/hooks/useSignup';
+
+const Alert = dynamic(() => import('@/components/Alert'));
+const InputWrapper = dynamic(() => import('@/components/InputWrapper'));
+const TextInput = dynamic(() => import('@/components/TextInput'));
+const Button = dynamic(() => import('@/components/Button'));
 
 const SignUp = () => {
   const router = useRouter();
@@ -60,7 +62,7 @@ const SignUp = () => {
                 name="email"
                 placeholder="Enter your email"
                 value={values.email}
-                invalidMessage={touched.password && errors.email}
+                invalidMessage={touched.email && errors.email}
                 onChange={handleChange}
               />
             </InputWrapper>
@@ -69,7 +71,7 @@ const SignUp = () => {
                 name="name"
                 placeholder="Enter your name"
                 value={values.name}
-                invalidMessage={touched.password && errors.name}
+                invalidMessage={touched.name && errors.name}
                 onChange={handleChange}
               />
             </InputWrapper>

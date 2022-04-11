@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import type {PropsWithChildren} from 'react';
 
 import type {InputWrapperProps} from '.';
@@ -14,4 +14,4 @@ const InputWrapper = ({label, children}: PropsWithChildren<InputWrapperProps>) =
   );
 };
 
-export default InputWrapper;
+export default memo(InputWrapper);

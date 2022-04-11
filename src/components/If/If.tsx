@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {PropsWithChildren} from 'react';
 
 import type {IfProps} from '.';
@@ -8,4 +8,4 @@ const If = ({condition, children}: PropsWithChildren<IfProps>) => {
   return null;
 };
 
-export default If;
+export default memo(If);

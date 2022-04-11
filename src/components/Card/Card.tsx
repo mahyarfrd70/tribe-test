@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {memo, useMemo} from 'react';
 
 import {getDistance} from '@/utils/timeFormat';
 
@@ -31,7 +31,7 @@ const Card = ({
   );
 
   return (
-    <div className="card card-bordered w-full bg-base-100 shadow-xl max-w-2xl">
+    <div className="card card-bordered w-full bg-base-100 shadow-xl max-w-2xl mb-3">
       <div className="flex justify-between items-center p-4 pb-0">
         <div className="flex items-center">
           <Avatar dataTestId="card-avatar" name={name} className="w-10 text-xs mr-2" />
@@ -78,7 +78,8 @@ const Card = ({
             className="h-6 w-6"
             fill={reacted ? 'currentColor' : 'none'}
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -92,4 +93,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default memo(Card);

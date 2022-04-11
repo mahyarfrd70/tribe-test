@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import React from 'react';
+import React, {memo} from 'react';
 import type {PropsWithChildren} from 'react';
 
 import type {AlertProps} from '.';
@@ -16,4 +16,4 @@ const Alert = ({alertType = 'alert-error', children}: PropsWithChildren<AlertPro
   );
 };
 
-export default Alert;
+export default memo(Alert);

@@ -3,21 +3,23 @@ import * as Yup from 'yup';
 
 import {useEffect} from 'react';
 
+import dynamic from 'next/dynamic';
 import {useRouter} from 'next/router';
 
-import Alert from '@/components/Alert';
-import Button from '@/components/Button/Button';
 import Container from '@/components/Container';
 import HTMLHeadWrapper from '@/components/HTMLHeadWrapper';
 import If from '@/components/If';
-import InputWrapper from '@/components/InputWrapper';
 import Spinner from '@/components/Spinner';
-import TextInput from '@/components/TextInput';
 import {regexPatterns} from '@/constants/regex';
 import validationMessages from '@/constants/validationMessages';
 import useAuth from '@/hooks/useAuth';
 import useSignIn from '@/hooks/useSignin';
 import type {LoginValues} from '@/hooks/useSignin';
+
+const Alert = dynamic(() => import('@/components/Alert'));
+const InputWrapper = dynamic(() => import('@/components/InputWrapper'));
+const TextInput = dynamic(() => import('@/components/TextInput'));
+const Button = dynamic(() => import('@/components/Button'));
 
 const SignIn = () => {
   const router = useRouter();
@@ -57,7 +59,7 @@ const SignIn = () => {
                 name="email"
                 placeholder="Enter your email"
                 value={values.email}
-                invalidMessage={touched.password && errors.email}
+                invalidMessage={touched.email && errors.email}
                 onChange={handleChange}
               />
             </InputWrapper>

@@ -17,9 +17,20 @@ const Header = () => {
     <div className="shadow sticky top-0 bg-white z-50" data-testid="header">
       <Container className="navbar">
         <div className="flex-1">
-          <Link href="/">
-            <a className="normal-case text-xl">Tribe</a>
-          </Link>
+          <ul className="menu menu-horizontal p-0">
+            <li>
+              <Link href="/">
+                <a className="normal-case text-xl">Tribe</a>
+              </Link>
+            </li>
+            <If condition={isLoggedIn}>
+              <li>
+                <Link href="/add-post">
+                  <a className="">Add Post</a>
+                </Link>
+              </li>
+            </If>
+          </ul>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal p-0">

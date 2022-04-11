@@ -1,5 +1,7 @@
 import React from 'react';
 
+import dynamic from 'next/dynamic';
+
 import {Post} from '@tribeplatform/gql-client/types';
 
 import Container from '@/components/Container';
@@ -8,14 +10,16 @@ import If from '@/components/If';
 import Spinner from '@/components/Spinner';
 import errorMessages from '@/constants/errorMessages';
 import useGetPosts from '@/hooks/useFeeds';
-import PostCard from '@/widgets/PostCard';
+
+//load PostCard lazily
+const PostCard = dynamic(() => import('@/widgets/PostCard'));
 
 const Posts = () => {
   const {posts, isError, isFetching, isSuccess} = useGetPosts();
 
   return (
     <HTMLHeadWrapper title="Tribe test | Posts" description="Posts' list of community">
-      <Container className="p-3 flex justify-center">
+      <Container className="p-3 flex flex-col justify-center items-center">
         <If condition={isFetching}>
           <Spinner />
         </If>

@@ -1,3 +1,5 @@
+import {memo} from 'react';
+
 import {Post} from '@tribeplatform/gql-client/types';
 
 import Card from '@/components/Card';
@@ -24,4 +26,4 @@ const PostCard = ({post}: {post: Post}) => {
     />
   );
 };
-export default PostCard;
+export default memo(PostCard);
