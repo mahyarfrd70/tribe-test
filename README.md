@@ -23,10 +23,12 @@ First of all to run the project you need to follow the below steps:
 4. Run `npx husky install`.
 5. Created a file called `.env.local` and you have to set your credentials there to make the app work. you need to set below values in this file:
 
+````
    CLIENT_SECRET=your-client-secret
    CLIENT_ID=your-client-id
    NETWORK_ID=your-network-id
    NETWORK_DOMAIN=your-network-domain
+````
 
 And now the project is ready to be run in different mode and environment, so to run on different mode please follow the below steps.
 
