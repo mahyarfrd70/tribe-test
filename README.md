@@ -2,6 +2,8 @@
 
 The project has been created based on Nextjs. the reason why I've used Nextjs is that I wanted to create some internal API service , so I had to either create another Nodejs server repository or use Nextjs. as I didn't want to create another repository I prefered to configure the project with Nextjs. This project is not a project that just works with my credential, you can setup your credential and run you Tribe's app on top of it, but it's not been compeleted, I just implemented some feature like create post, upvote and downvote, signin and signup. what I'll work on if I have a chance to contnue this project is that, first of all I'll implement leaving comments under the posts, then filtering and sorting posts. moreover , I havn't used state management in this project, I thought that I don't need to use them.
 
+NOTE: Tribe services error is not fully handled in the project, I've just managed some of them.
+
 ## Stack
 
 - Nextjs
