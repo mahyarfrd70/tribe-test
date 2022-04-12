@@ -1,12 +1,12 @@
 import {memo} from 'react';
 
-import {Post} from '@tribeplatform/gql-client/types';
-
 import Card from '@/components/Card';
 import {PERMISSIONS} from '@/constants/permissions';
 import usePostActions from '@/hooks/usePostActions';
 
-const PostCard = ({post}: {post: Post}) => {
+import {PostCardProps} from './PostCard.type';
+
+const PostCard = ({post}: PostCardProps) => {
   const {reacted, getActionPermission, deletePost, toggleReaction} = usePostActions(post);
   const [canDelete] = getActionPermission([PERMISSIONS.DELETE_POST]);
 
